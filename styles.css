@@ -1,9 +1,4 @@
-
-  
-  
-
 /* CSS for styling */
-
 
 header {
     /* Add styles for header */
@@ -39,6 +34,7 @@ body {
     border-right: 1px solid rgb(139,0,0);
     
  }
+
 .flex-container {
     display: flex;
     flex-direction: row; /* or column, depending on layout */
@@ -52,22 +48,19 @@ body {
       display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically (optional) */
-  height: 40%; /* Adjust height as needed */
+  height: 50%; /* Adjust height as needed */
   }
   .flex-item {
     flex: 1; /* This allows items to grow and shrink equally */
     /* Additional styles for flex items */
   }
   
-  
-  
+
   .item {
     flex: 2;
     padding: 3%x;
   }
  
-  
-
 a {
 	font-weight: bold;
 }
@@ -94,9 +87,9 @@ nav {
 ul {
     /* Remove default list styles */
     list-style: none;
-    display: flex; /* Display the list items horizontally */    
+    display: flex; /* Display the list items horizontally */
+        
 }
-
 li {
     /* Add styles for list items */
     display: inline-block; /* Display items in a row */
@@ -120,7 +113,8 @@ a {
 	border-color: #000000;
     margin-left: 10px;
     margin-right: 10px;
-    font-style: italic;	
+    font-style: italic;
+    
 }
 
 .image-container img {
@@ -130,7 +124,7 @@ a {
     padding: 3px 3px 3px 3px;
     border-width: 2px;
 	border-style: solid;
-    
+        
   }
   @media screen and (max-width: 768px) {
     /* Adjust styles for smaller screens */
@@ -173,6 +167,7 @@ a {
     li {
         /* Example: Adjust list item styles for smaller screens */
         margin-right: 0;
+        margin-right: 80px;
     }
 
     .about {
