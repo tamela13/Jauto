@@ -3,18 +3,17 @@
   
 
 /* CSS for styling */
+
+
 header {
     /* Add styles for header */
     background-color: #800000;
     color: hsl(0, 3%, 43%);
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-right: .70%;
+    margin-left: .70%;
 }
 
-@media screen and (max-width: 768px) {
-    /* CSS rules for smaller screens */
-  }
 
 h1 {
     font-family: Georgia;
@@ -31,6 +30,7 @@ h3 {
     font-family: Georgia;
 	font-size: .8em;
 }
+
 body {
     display: block;
     background-color: #800000;
@@ -53,7 +53,7 @@ body {
       display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically (optional) */
-  height: 299px; /* Adjust height as needed */
+  height: 40%; /* Adjust height as needed */
   }
   .flex-item {
     flex: 1; /* This allows items to grow and shrink equally */
@@ -61,12 +61,13 @@ body {
   }
   
   
+  
   .item {
     flex: 2;
-    padding: 10px;
+    padding: 3%x;
   }
  
-
+  
 
 a {
 	font-weight: bold;
@@ -88,7 +89,7 @@ nav {
     border-width: 2px;
 	border-style: solid;
 	border-color: #000000;
-    height: 70px; /* Adjust height as needed */
+    height: 25%; /* Adjust height as needed */
 }
 
 ul {
@@ -102,7 +103,7 @@ ul {
 li {
     /* Add styles for list items */
     display: inline-block; /* Display items in a row */
-    margin-right: 500px; /* Adjust spacing between items */
+    margin-right: 35%; /* Adjust spacing between items */
 
 }
 a {
@@ -137,3 +138,55 @@ a {
     
     
   }
+  @media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+
+    header {
+        /* Example: Reduce header height and add padding */
+        height: auto;
+        padding: 5%; /* Adjust based on your design */
+    }
+
+    .flex-container {
+        /* Example: Stack items vertically on smaller screens */
+        flex-direction: column;
+        height: auto;
+    }
+
+    .item {
+        /* Example: Adjust flex properties and padding for items */
+        flex: 1;
+        padding: 2%; /* Adjust based on your design */
+    }
+
+    .image-container img {
+        /* Example: Make images responsive and remove right margin */
+        width: 100%;
+        margin-right: 0;
+    }
+
+    nav {
+        /* Example: Adjust navigation styles for smaller screens */
+        height: auto;
+        font-size: 1.2em;
+    }
+
+    ul {
+        /* Example: Adjust list styles for smaller screens */
+        margin-right: 0;
+    }
+
+    li {
+        /* Example: Adjust list item styles for smaller screens */
+        margin-right: 0;
+    }
+
+    .about {
+        /* Example: Adjust styles for the about section */
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+
+ 
