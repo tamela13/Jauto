@@ -1,16 +1,17 @@
+
+  /* CSS for styling */
+
 header {
     /* Add styles for header */
     background-color: #800000;
     color: hsl(0, 3%, 43%);
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    text-align: center;  
 }
 
 h1 {
     font-family: Georgia;
     font-style: italic;
-	font-size: 2.4em;
+	font-size: 2.2em;
 }
 
 h2 {
@@ -23,10 +24,18 @@ h3 {
 	font-size: .8em;
 }
 
+body {
+    display: block;
+    background-color: #800000;
+    box-shadow: rgb(138,0,0) 10px 0px 40px, rgb(138,0,0) -10px 0px 40px;
+    border-left: 1px solid rgb(139,0,0);
+    border-right: 1px solid rgb(139,0,0);
+ }
 
 .flex-container {
     display: flex;
-        font-family: Helvetica;
+    flex-direction: row; /* or column, depending on layout */
+     font-family: Helvetica;
       font-size: 1.45em;
       text-align: center;
       color: #757070;
@@ -36,23 +45,19 @@ h3 {
       display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically (optional) */
-  height: 300px; /* Adjust height as needed */
+  height: 50%; /* Adjust height as needed */
   }
-
+  
+  .flex-item {
+    flex: 1; /* This allows items to grow and shrink equally */
+    /* Additional styles for flex items */
+  }
+  
   .item {
     flex: 2;
-    padding: 10px;
+    padding: 3%x;
   }
  
-body {
-   display: block;
-   background-color: #800000;
-   box-shadow: rgb(138,0,0) 10px 0px 40px, rgb(138,0,0) -10px 0px 40px;
-   border-left: 1px solid rgb(139,0,0);
-   border-right: 1px solid rgb(139,0,0);
-   
-}
-
 a {
 	font-weight: bold;
 }
@@ -68,26 +73,22 @@ nav {
     text-align: center;
     font-family: Georgia;
     font-size: 1.5em;
-    margin-left: 10px;
-    margin-right: 10px;
     border-width: 2px;
 	border-style: solid;
 	border-color: #000000;
-    height: 70px; /* Adjust height as needed */
+    height: 25%; /* Adjust height as needed */
 }
 
 ul {
     /* Remove default list styles */
     list-style: none;
     display: flex; /* Display the list items horizontally */
-    
-    
-    
+        
 }
 li {
     /* Add styles for list items */
     display: inline-block; /* Display items in a row */
-    margin-right: 620px; /* Adjust spacing between items */
+    margin-right: 40%; /* Adjust spacing between items */
 
 }
 a {
@@ -95,4 +96,120 @@ a {
     text-decoration: none;
     color: #757070;
     text-align: center;
+}
+ 
+
+  @media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+
+    header {
+        /* Example: Reduce header height and add padding */
+        height: auto;
+        padding: 5%; /* Adjust based on your design */
+    }
+
+    .flex-container {
+        /* Example: Stack items vertically on smaller screens */
+        flex-direction: column;
+        height: auto;
+    }
+
+    .item {
+        /* Example: Adjust flex properties and padding for items */
+        flex: 1;
+        padding: 2%; /* Adjust based on your design */
+    }
+
+    .image-container img {
+        /* Example: Make images responsive and remove right margin */
+        width: 100%;
+        margin-right: 0;
+    }
+
+    nav {
+        /* Example: Adjust navigation styles for smaller screens */
+        height: auto;
+        font-size: 1.2em;
+    }
+
+    ul {
+        /* Example: Adjust list styles for smaller screens */
+        margin-right: 0;
+    }
+
+    li {
+        /* Example: Adjust list item styles for smaller screens */
+        margin-right: 0;
+        margin-right: 30px;
+    }
+
+    .about {
+        /* Example: Adjust styles for the about section */
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+.image-gallery {
+	font-family: Helvetica;
+	font-size: 1.45em;
+	text-align: center;
+    color: #757070;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #000000;
+    font-style: italic;
+    
+}
+
+/* CSS for the image gallery */
+
+.row {
+    display: flex;
+    justify-content: center;
+    
+    position: relative; /* Position relative for drawing line */
+}
+.row::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust line thickness */
+    background-color: black; /* Adjust line color */
+    z-index: 1; /* Ensure line is above images */
+}
+.image-gallery {
+    text-align: center;
+}
+.image {
+    margin: 50px;
+    flex: 1; /* Distribute available space equally among images */
+}
+.image img {
+    width: 80%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+}
+.caption {
+    font-size: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .row {
+        flex-wrap: wrap; /* Allow images to wrap onto multiple lines */
+    }
+    .image {
+        flex: 1 0 100%; /* Take up full width on smaller screens */
+        margin: 5px 0; /* Adjust margin as needed */
+    }
+}
+
+footer {
+    text-align: center;
+    color: #757070;
+    margin-top: 0; /* Remove the margin from the top */
 }
