@@ -1,7 +1,7 @@
 
   /* CSS for styling */
 
-header {
+  header {
     /* Add styles for header */
     background-color: #800000;
     color: hsl(0, 3%, 43%);
@@ -112,6 +112,7 @@ a {
         /* Example: Stack items vertically on smaller screens */
         flex-direction: column;
         height: auto;
+        flex: 1 0 100%; /* Take up full width on smaller screens */
     }
 
     .item {
@@ -119,7 +120,7 @@ a {
         flex: 1;
         padding: 2%; /* Adjust based on your design */
     }
-
+    
     .image-container img {
         /* Example: Make images responsive and remove right margin */
         width: 100%;
@@ -134,7 +135,7 @@ a {
 
     ul {
         /* Example: Adjust list styles for smaller screens */
-        margin-right: 0;
+        margin-right: 0;   
     }
 
     li {
@@ -143,11 +144,6 @@ a {
         margin-right: 30px;
     }
 
-    .about {
-        /* Example: Adjust styles for the about section */
-        margin-left: 2%;
-        margin-right: 2%;
-    }
 }
 .image-gallery {
 	font-family: Helvetica;
