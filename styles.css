@@ -1,9 +1,4 @@
-
-  
-  
-
 /* CSS for styling */
-
 
 header {
     /* Add styles for header */
@@ -13,7 +8,6 @@ header {
     margin-right: .70%;
     margin-left: .70%;
 }
-
 
 h1 {
     font-family: Georgia;
@@ -60,7 +54,6 @@ body {
     /* Additional styles for flex items */
   }
   
-
   .item {
     flex: 2;
     padding: 3%x;
@@ -86,27 +79,30 @@ nav {
     border-width: 2px;
 	border-style: solid;
 	border-color: #000000;
-    height: 25%; /* Adjust height as needed */
+    height: auto; /* Adjust height to fit content */
 }
 
 ul {
     /* Remove default list styles */
     list-style: none;
+    padding: 0; /* Remove default padding */
     display: flex; /* Display the list items horizontally */
-        
+    justify-content: center; /* Center the menu items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
 }
+
 li {
     /* Add styles for list items */
-    display: inline-block; /* Display items in a row */
-    margin-right: 40%; /* Adjust spacing between items */
-
+    margin: 10px; /* Adjust spacing between items */
 }
+
 a {
     /* Add styles for anchor links */
     text-decoration: none;
     color: #757070;
     text-align: center;
 }
+
  
 .about {
 	font-family: Helvetica;
@@ -123,7 +119,7 @@ a {
 }
 
 .image-container img {
-    width: 400px; /* Adjust the width as needed */
+    width: 50%; /* Adjust the width as needed */
     height: auto;
     margin-right: 20px; /* Adjust the margin as needed */
     padding: 3px 3px 3px 3px;
@@ -145,7 +141,11 @@ a {
         flex-direction: column;
         height: auto;
     }
-
+    .logo img {
+        width: 100%; /* Make the logo fill its container width */
+        max-width: 100%; /* Ensure the logo doesn't exceed its original size */
+        height: auto; /* Maintain aspect ratio */
+    }
     .item {
         /* Example: Adjust flex properties and padding for items */
         flex: 1;
@@ -155,24 +155,6 @@ a {
     .image-container img {
         /* Example: Make images responsive and remove right margin */
         width: 100%;
-        margin-right: 0;
-    }
-
-    nav {
-        /* Example: Adjust navigation styles for smaller screens */
-        height: auto;
-        font-size: 1.2em;
-    }
-
-    ul {
-        /* Example: Adjust list styles for smaller screens */
-        margin-right: 0;
-    }
-
-    li {
-        /* Example: Adjust list item styles for smaller screens */
-        margin-right: 0;
-        margin-right: 40px;
     }
 
     .about {
