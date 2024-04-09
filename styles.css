@@ -103,7 +103,6 @@ a {
     text-align: center;
 }
 
- 
 .about {
 	font-family: Helvetica;
 	font-size: 1.45em;
@@ -118,15 +117,6 @@ a {
     
 }
 
-.image-container img {
-    width: 50%; /* Adjust the width as needed */
-    height: auto;
-    margin-right: 20px; /* Adjust the margin as needed */
-    padding: 3px 3px 3px 3px;
-    border-width: 2px;
-	border-style: solid;
-        
-  }
   @media screen and (max-width: 768px) {
     /* Adjust styles for smaller screens */
 
@@ -155,6 +145,7 @@ a {
     .image-container img {
         /* Example: Make images responsive and remove right margin */
         width: 100%;
+        
     }
 
     .about {
